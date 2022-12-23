@@ -14,6 +14,7 @@ public class UntrustedCertificate {
     public void handleCertificate() throws InterruptedException {
 
         DesiredCapabilities cap = new DesiredCapabilities();
+        cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
         cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 
         ChromeOptions co = new ChromeOptions();

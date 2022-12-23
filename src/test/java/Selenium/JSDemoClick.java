@@ -36,5 +36,6 @@ public class JSDemoClick {
         driver.quit();
 //        driver.close();
 
+        js.executeScript("window.scrollBy(0, 950)", "");
     }
 }
