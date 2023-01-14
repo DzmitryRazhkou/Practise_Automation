@@ -1,16 +1,21 @@
 package Selenium;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class DropDownMenu {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.facebook.com/");
@@ -43,6 +48,18 @@ public class DropDownMenu {
                 break;
             }
         }
+
+//        Check The Size:
+        Select monthsSelect = new Select(month);
+        List<WebElement> allOptionsEls = monthsSelect.getOptions();
+        List<String> allOptions = new ArrayList<>();
+        for (WebElement s: allOptionsEls){
+            allOptions.add(s.getText());
+        }
+        System.out.println(allOptions);
+
+        Set<String> months = new HashSet<>(allOptions);
+        Assert.assertEquals(allOptions.size(), months.size());
 
 
     }
