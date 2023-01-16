@@ -43,7 +43,7 @@ public class DropDownMenu {
             String Months = listOfMonth.get(i).getText();
             System.out.println(Months);
 
-            if (Months .equals("Sep")) {
+            if (Months.equals("Sep")) {
                 listOfMonth.get(i).click();
                 break;
             }
@@ -53,14 +53,22 @@ public class DropDownMenu {
         Select monthsSelect = new Select(month);
         List<WebElement> allOptionsEls = monthsSelect.getOptions();
         List<String> allOptions = new ArrayList<>();
-        for (WebElement s: allOptionsEls){
+        for (WebElement s : allOptionsEls) {
             allOptions.add(s.getText());
         }
         System.out.println(allOptions);
 
         Set<String> months = new HashSet<>(allOptions);
         Assert.assertEquals(allOptions.size(), months.size());
+    }
 
 
+    //
+    public String doDropDownSelect1(String value1, WebElement dropDownMenu) {
+        Select dropDown = new Select(dropDownMenu);
+        dropDown.selectByValue(value1);
+        dropDown.getOptions();
+
+        return dropDown.getFirstSelectedOption().getText();
     }
 }
