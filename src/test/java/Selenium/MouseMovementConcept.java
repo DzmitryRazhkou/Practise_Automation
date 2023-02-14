@@ -1,5 +1,6 @@
 package Selenium;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class MouseMovementConcept {
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver");   // Setup ChromeDriver
+        WebDriverManager.chromedriver().setup();  // Setup ChromeDriver
         WebDriver driver = new ChromeDriver();   // Launch A Google Chrome
 
 //        driver.manage().window().maximize();   // Maximize Window

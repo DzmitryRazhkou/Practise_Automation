@@ -1,5 +1,6 @@
 package Selenium;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,7 @@ import java.util.List;
 
 public class HiddenWebElementsRadioButton {
     public static void main(String[] args) throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-automate-radio-button-in.html");
         Thread.sleep(500);

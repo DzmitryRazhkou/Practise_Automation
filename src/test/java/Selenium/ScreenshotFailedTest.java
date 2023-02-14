@@ -10,9 +10,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import javax.swing.text.Utilities;
-import java.util.Set;
-
 public class ScreenshotFailedTest {
 
     @Test
@@ -46,5 +43,4 @@ public class ScreenshotFailedTest {
             captureScreenshotFailed();
         }
     }
-
 }

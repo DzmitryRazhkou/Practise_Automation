@@ -36,9 +36,6 @@ public class SVG_Graph {
 
             String data = driver.findElement(By.xpath("//*[@class='ExnoTd']")).getText();
             System.out.println(data);
-
-
-
         }
     }
 }

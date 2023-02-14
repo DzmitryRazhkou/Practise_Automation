@@ -47,6 +47,7 @@ public class DifferentCracterEnteringSendKeys {
                 .append("Selenium")
                 .append(" ")
                 .append("Automatiom");
+
         email.sendKeys(username);
     }
 }

@@ -35,8 +35,5 @@ public class CalendarTest {
         }
 
         driver.findElement(By.xpath("//a[text()='28']")).click();
-
-
-
     }
 }

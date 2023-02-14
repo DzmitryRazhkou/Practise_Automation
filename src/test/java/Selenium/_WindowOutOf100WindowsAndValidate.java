@@ -10,8 +10,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class WindowOutOf100WindowsAndValidate {
+public class _WindowOutOf100WindowsAndValidate {
     public static WebDriver driver;
+
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -23,25 +24,21 @@ public class WindowOutOf100WindowsAndValidate {
         String parentWindowId = driver.getWindowHandle();
 
         driver.get(URL);
-        driver.findElement(By.xpath("//img[@alt='LinkedIn OrangeHRM group']")).click();
-        driver.findElement(By.xpath("//img[@alt='OrangeHRM on Facebook']")).click();
-        driver.findElement(By.xpath("//img[@alt='OrangeHRM on twitter']")).click();
-        driver.findElement(By.xpath("//img[@alt='OrangeHRM on youtube']")).click();
+        driver.findElement(By.xpath("(//div[@class='orangehrm-login-footer-sm']//a)[1]")).click();
+        driver.findElement(By.xpath("(//div[@class='orangehrm-login-footer-sm']//a)[2]")).click();
+        driver.findElement(By.xpath("(//div[@class='orangehrm-login-footer-sm']//a)[3]")).click();
+        driver.findElement(By.xpath("(//div[@class='orangehrm-login-footer-sm']//a)[4]")).click();
 
         Set<String> handles = driver.getWindowHandles();
         List<String> hList = new ArrayList<String>(handles);
-        if (switchToRightWindow("Facebook", hList)) {
+        if (switchToRightWindow("OrangeHRM Inc", hList)) {
             System.out.println(driver.getCurrentUrl() + ": " + driver.getTitle());
         }
 
         closeAllWindow(hList, parentWindowId);
         switchToParentWindow(parentWindowId);
         System.out.println(driver.getCurrentUrl() + ": " + driver.getTitle());
-
-
-
-
-        }
+    }
 
     public static void closeAllWindow (List<String> hList, String parentWindowId) {
         for (String e: hList) {

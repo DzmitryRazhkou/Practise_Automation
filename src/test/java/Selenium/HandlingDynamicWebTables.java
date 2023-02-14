@@ -1,5 +1,6 @@
 package Selenium;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class HandlingDynamicWebTables {
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver");   // Setup ChromeDriver
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();   // Launch A Google Chrome
 
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);

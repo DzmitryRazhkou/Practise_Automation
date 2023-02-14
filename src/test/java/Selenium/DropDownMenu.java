@@ -35,7 +35,7 @@ public class DropDownMenu {
         System.out.println("Is this Drop-Down is Multiple? An answer is: " + select.isMultiple());
 
         List<WebElement> listOfMonth = select.getOptions();
-        System.out.println("Total Months are: " + listOfMonth.size());
+        System.out.println("Total Months are: " + listOfMonth);
 
         for (int i = 0; i < listOfMonth.size(); i++) {
 //        for (WebElement y : listOfMonth){

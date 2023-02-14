@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class StaleElementReferenceException extends Throwable {
-    public static void main(String[] args) {
+//public class StaleElementReferenceException extends Throwable {
+//    public static void main(String[] args) {
 //        WebDriverManager.firefoxdriver().setup();
 //        WebDriver driver = new ChromeDriver();
 //        driver.get("");
@@ -18,5 +18,5 @@ public class StaleElementReferenceException extends Throwable {
 //                System.out.println(ex.toString());
 //            }
 //        }
-    }
-}
+//    }
+//}

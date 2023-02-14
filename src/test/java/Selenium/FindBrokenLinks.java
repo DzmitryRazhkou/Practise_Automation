@@ -24,6 +24,7 @@ public class FindBrokenLinks {
         driver.manage().window().maximize();
         driver.get("https://amazon.com");
 
+
         List<WebElement> links = driver.findElements(By.tagName("a"));   // total links on the website.
         System.out.println("The amount of links are: " + links.size());
 

@@ -7,7 +7,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class PopUpAlertClass {
     public static void main(String[] args) {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.safaridriver().setup();
         WebDriver driver = new SafariDriver();
 
         Alert alert = driver.switchTo().alert();

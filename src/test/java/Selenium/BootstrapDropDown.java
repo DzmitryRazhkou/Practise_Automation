@@ -1,5 +1,6 @@
 package Selenium;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,11 +16,8 @@ public class BootstrapDropDown {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver");   // Setup ChromeDriver
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();   // Launch A Google Chrome
-
-
-
         driver.manage().window().maximize();   // Maximize Window
         driver.manage().deleteAllCookies();   // Delete All the Cookies
 
@@ -43,9 +41,6 @@ public class BootstrapDropDown {
                 break;
             }
         }
-
-
-
-
+        driver.quit();
     }
 }

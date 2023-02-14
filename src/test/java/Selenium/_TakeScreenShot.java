@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class TakeScreenShot {
+public class _TakeScreenShot {
     static WebDriver driver;
 
     public static void main(String[] args) throws IOException {

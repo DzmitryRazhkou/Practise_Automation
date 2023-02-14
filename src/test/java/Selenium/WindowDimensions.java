@@ -10,9 +10,10 @@ public class WindowDimensions {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
-        Dimension d = new Dimension(320, 568);
+        Dimension d = new Dimension(75, 25);
         driver.manage().window().setSize(d);
         driver.get("https://www.chipotle.com/");
+
         System.out.println("The Title Page is: " + driver.getTitle());
         Thread.sleep(3000);
         driver.quit();
